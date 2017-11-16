@@ -83,3 +83,116 @@ Processing by EquiposController#index as HTML
 Completed 200 OK in 170ms (Views: 148.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/facturas" for 127.0.0.1 at 2017-11-16 14:23:41 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FacturasController#index as HTML
+  Rendering facturas/index.html.erb within layouts/application
+  [1m[36mFactura Load (1.0ms)[0m  [1m[34mSELECT "facturas".* FROM "facturas"[0m
+  Rendered facturas/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 510ms (Views: 478.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-11-16 14:23:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/facturas/" for 127.0.0.1 at 2017-11-16 14:26:28 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FacturasController#index as HTML
+  Rendering facturas/index.html.erb within layouts/application
+  [1m[36mFactura Load (0.0ms)[0m  [1m[34mSELECT "facturas".* FROM "facturas"[0m
+  Rendered facturas/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 243ms (Views: 210.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/facturas/" for 127.0.0.1 at 2017-11-16 14:27:04 -0500
+Processing by FacturasController#index as HTML
+  Rendering facturas/index.html.erb within layouts/application
+  [1m[36mFactura Load (0.0ms)[0m  [1m[34mSELECT "facturas".* FROM "facturas"[0m
+  Rendered facturas/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 103ms (Views: 79.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/facturas/" for 127.0.0.1 at 2017-11-16 14:27:44 -0500
+Processing by FacturasController#index as HTML
+  Rendering facturas/index.html.erb within layouts/application
+  [1m[36mFactura Load (1.0ms)[0m  [1m[34mSELECT "facturas".* FROM "facturas"[0m
+  Rendered facturas/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 99ms (Views: 76.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipos" for 127.0.0.1 at 2017-11-16 14:27:53 -0500
+Processing by EquiposController#index as HTML
+  Rendering equipos/index.html.erb within layouts/application
+  [1m[36mEquipo Load (1.0ms)[0m  [1m[34mSELECT "equipos".* FROM "equipos"[0m
+  Rendered equipos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 116ms (Views: 78.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipos/new" for 127.0.0.1 at 2017-11-16 14:27:58 -0500
+Processing by EquiposController#new as HTML
+  Rendering equipos/new.html.erb within layouts/application
+  Rendered equipos/_form.html.erb (16.0ms)
+  Rendered equipos/new.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 143ms (Views: 113.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/equipos" for 127.0.0.1 at 2017-11-16 14:28:05 -0500
+Processing by EquiposController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7fhLSYdEr7yqJnLreDn8gR1Nt8tdh7KPx32OxFgadpOzqWuWsxROhR1Zq9Znxizy8gpeiWqdtuzv6hXuEFt2UA==", "equipo"=>{"IdEquipo"=>"1", "Placa"=>"1", "Modelo"=>"1", "Serie"=>"1", "Marca"=>"1", "IdEstadoEquipo"=>"1", "IdTipoEquipo"=>"1", "IdArea"=>"1", "eliminado"=>"1"}, "commit"=>"Create Equipo"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "equipos" ("IdEquipo", "Placa", "Modelo", "Serie", "Marca", "IdEstadoEquipo", "IdTipoEquipo", "IdArea", "eliminado", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["IdEquipo", "1"], ["Placa", "1"], ["Modelo", "1"], ["Serie", "1"], ["Marca", "1"], ["IdEstadoEquipo", "1"], ["IdTipoEquipo", "1"], ["IdArea", "1"], ["eliminado", 1], ["created_at", "2017-11-16 19:28:06.012052"], ["updated_at", "2017-11-16 19:28:06.012052"]]
+  [1m[35m (51.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/equipos/1
+Completed 302 Found in 61ms (ActiveRecord: 52.9ms)
+
+
+Started GET "/equipos/1" for 127.0.0.1 at 2017-11-16 14:28:06 -0500
+Processing by EquiposController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipo Load (1.0ms)[0m  [1m[34mSELECT  "equipos".* FROM "equipos" WHERE "equipos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering equipos/show.html.erb within layouts/application
+  Rendered equipos/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 109ms (Views: 81.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipos" for 127.0.0.1 at 2017-11-16 14:28:08 -0500
+Processing by EquiposController#index as HTML
+  Rendering equipos/index.html.erb within layouts/application
+  [1m[36mEquipo Load (0.0ms)[0m  [1m[34mSELECT "equipos".* FROM "equipos"[0m
+  Rendered equipos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 109ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
