@@ -1,0 +1,62 @@
+<%= form_with(model: equipo, local: true) do |form| %>
+  <% if equipo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(equipo.errors.count, "error") %> prohibited this equipo from being saved:</h2>
+
+      <ul>
+      <% equipo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :IdEquipo %>
+    <%= form.text_field :IdEquipo, id: :equipo_IdEquipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Placa %>
+    <%= form.text_field :Placa, id: :equipo_Placa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Modelo %>
+    <%= form.text_field :Modelo, id: :equipo_Modelo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Serie %>
+    <%= form.text_field :Serie, id: :equipo_Serie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Marca %>
+    <%= form.text_field :Marca, id: :equipo_Marca %>
+  </div>
+
+  <div class="field">
+    <%= form.label :IdEstadoEquipo %>
+    <%= form.text_field :IdEstadoEquipo, id: :equipo_IdEstadoEquipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :IdTipoEquipo %>
+    <%= form.text_field :IdTipoEquipo, id: :equipo_IdTipoEquipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :IdArea %>
+    <%= form.text_field :IdArea, id: :equipo_IdArea %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eliminado %>
+    <%= form.number_field :eliminado, id: :equipo_eliminado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
