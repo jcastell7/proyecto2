@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdEquipo: MyString
+  Placa: MyString
+  Modelo: MyString
+  Serie: MyString
+  Marca: MyString
+  IdEstadoEquipo: MyString
+  IdTipoEquipo: MyString
+  IdArea: MyString
+  eliminado: 1
+
+two:
+  IdEquipo: MyString
+  Placa: MyString
+  Modelo: MyString
+  Serie: MyString
+  Marca: MyString
+  IdEstadoEquipo: MyString
+  IdTipoEquipo: MyString
+  IdArea: MyString
+  eliminado: 1

@@ -1,0 +1,85 @@
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (93.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (78.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFacturas (20171116183325)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "facturas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "IdFacturas" varchar, "NumFactura" integer, "Fecha" varchar, "Concepto" varchar, "Valor" integer, "ComentarioFactura" varchar, "IdEstadoFactura" varchar, "eliminado" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171116183325"]]
+  [1m[35m (62.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-16 18:34:25.750892"], ["updated_at", "2017-11-16 18:34:25.750892"]]
+  [1m[35m (46.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-16 13:41:19 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 79ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/facturas" for 127.0.0.1 at 2017-11-16 13:41:35 -0500
+Processing by FacturasController#index as HTML
+  Rendering facturas/index.html.erb within layouts/application
+  [1m[36mFactura Load (0.0ms)[0m  [1m[34mSELECT "facturas".* FROM "facturas"[0m
+  Rendered facturas/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 387ms (Views: 366.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/facturas/new" for 127.0.0.1 at 2017-11-16 13:41:50 -0500
+Processing by FacturasController#new as HTML
+  Rendering facturas/new.html.erb within layouts/application
+  Rendered facturas/_form.html.erb (28.0ms)
+  Rendered facturas/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 140ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/facturas" for 127.0.0.1 at 2017-11-16 13:41:57 -0500
+Processing by FacturasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HXXtzcYG20h0g3c00NajYctwPnoT+tDjjqt9bqEmvlkBlaFUivTvBafM1xx9DcavAV5wsufF8GtGOUoJuVP96w==", "factura"=>{"IdFacturas"=>"1", "NumFactura"=>"1", "Fecha"=>"1", "Concepto"=>"1", "Valor"=>"1", "ComentarioFactura"=>"1", "IdEstadoFactura"=>"1", "eliminado"=>"1"}, "commit"=>"Create Factura"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "facturas" ("IdFacturas", "NumFactura", "Fecha", "Concepto", "Valor", "ComentarioFactura", "IdEstadoFactura", "eliminado", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["IdFacturas", "1"], ["NumFactura", 1], ["Fecha", "1"], ["Concepto", "1"], ["Valor", 1], ["ComentarioFactura", "1"], ["IdEstadoFactura", "1"], ["eliminado", 1], ["created_at", "2017-11-16 18:41:57.785848"], ["updated_at", "2017-11-16 18:41:57.785848"]]
+  [1m[35m (69.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/facturas/1
+Completed 302 Found in 80ms (ActiveRecord: 71.3ms)
+
+
+Started GET "/facturas/1" for 127.0.0.1 at 2017-11-16 13:41:57 -0500
+Processing by FacturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFactura Load (0.0ms)[0m  [1m[34mSELECT  "facturas".* FROM "facturas" WHERE "facturas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering facturas/show.html.erb within layouts/application
+  Rendered facturas/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 97ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/facturas" for 127.0.0.1 at 2017-11-16 13:42:00 -0500
+Processing by FacturasController#index as HTML
+  Rendering facturas/index.html.erb within layouts/application
+  [1m[36mFactura Load (0.0ms)[0m  [1m[34mSELECT "facturas".* FROM "facturas"[0m
+  Rendered facturas/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 88ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEquipos (20171116185108)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "equipos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "IdEquipo" varchar, "Placa" varchar, "Modelo" varchar, "Serie" varchar, "Marca" varchar, "IdEstadoEquipo" varchar, "IdTipoEquipo" varchar, "IdArea" varchar, "eliminado" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171116185108"]]
+  [1m[35m (46.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/equipos" for 127.0.0.1 at 2017-11-16 13:52:21 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EquiposController#index as HTML
+  Rendering equipos/index.html.erb within layouts/application
+  [1m[36mEquipo Load (0.0ms)[0m  [1m[34mSELECT "equipos".* FROM "equipos"[0m
+  Rendered equipos/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 170ms (Views: 148.3ms | ActiveRecord: 0.0ms)
+
+

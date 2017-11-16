@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  IdFacturas: MyString
+  NumFactura: 1
+  Fecha: MyString
+  Concepto: MyString
+  Valor: 1
+  ComentarioFactura: MyString
+  IdEstadoFactura: MyString
+  eliminado: 1
+
+two:
+  IdFacturas: MyString
+  NumFactura: 1
+  Fecha: MyString
+  Concepto: MyString
+  Valor: 1
+  ComentarioFactura: MyString
+  IdEstadoFactura: MyString
+  eliminado: 1
